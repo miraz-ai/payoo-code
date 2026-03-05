@@ -6,7 +6,7 @@ document.getElementById("btn-withdraw").addEventListener("click",function(){
         return;
     }
 
-     // 2- Get the amount
+     // 2- Get the amount to withdraw
      const amount = getValueFromInput('withdraw-amount');
 
      // 3 - Get the current amount
