@@ -19,6 +19,15 @@ document.getElementById('btn-add-money').addEventListener('click',function(){
    if(pin === '1234'){
       alert(`Money Added Successfully from ${bankName} at ${new Date()}`)
       setBalance(newBalance);
+      // history.
+       const history = document.getElementById('history-container');
+       const newHistory = document.createElement("div")
+       newHistory.innerHTML = `
+         <div class="transaction-card card bg-base-100 w-full shadow rounded-2xl">
+               ${'$'+amount} Money Added Successfully from ${bankName} at ${new Date()}
+         </div>
+       `;
+       history.append(newHistory);
    }
    else
    {

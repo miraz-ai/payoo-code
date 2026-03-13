@@ -24,6 +24,14 @@ document.getElementById("btn-withdraw").addEventListener("click",function(){
     if(pin === "1234"){
         alert("Withdraw Successfully")
         setBalance(newBalance);
+       const history = document.getElementById('history-container');
+       const newHistory = document.createElement("div")
+       newHistory.innerHTML = `
+         <div class="transaction-card card bg-base-100 w-full shadow rounded-2xl p-5 y-5">
+               ${'$'+amount} Money withdrawal Successfully to ${agentNumber} at ${new Date()}
+         </div>
+       `;
+       history.append(newHistory);
     }
     else{
         alert("Invalid Pin");
