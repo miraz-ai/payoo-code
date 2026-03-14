@@ -10,7 +10,7 @@ document.getElementById('btn-login').addEventListener('click',function(){
 
     if(contact == "01783203317"  && pin == "1234"){
         alert("login Success");
-        window.location.assign("./home.html")
+        window.location.assign("../home.html")
     }
     else{
         alert("Login Failed");
